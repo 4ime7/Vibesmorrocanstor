@@ -1,14 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vibes Moroccan Stor</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Alfa Slab One', cursive;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f9e6be;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+    header img {
+      height: 100px;
+    }
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    nav ul li a {
+      color: #f9e6be;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .hero-title {
+      text-align: center;
+      font-size: 48px;
+      margin: 30px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 0 20px 40px;
+    }
+    .product {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .product img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .product h3 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    .product button {
+      margin-top: 10px;
+      background: orange;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .about {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .about p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 18px;
+    }
+    .about .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .whatsapp {
+      background: #25d366;
+    }
+    .contact {
+      background: orange;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Vibes Moroccan Stor Logo" class="logo" />
+    <img src="logo.png" alt="Logo">
     <nav>
       <ul>
         <li><a href="#">HOME</a></li>
@@ -19,42 +116,34 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>LMAGHRIB F T-SHIRT</h1>
-    </section>
+  <div class="hero-title">LMAGHRIB F T-SHIRT</div>
 
-    <section class="products">
-      <h2>FEATURED PRODUCTS</h2>
-      <div class="product-list">
-        <div class="product">
-          <img src="tna.png" alt="TNA F Casablanca" />
-          <h3>SEN ENCOUCA</h3>
-          <button>ORDER NOW</button>
-        </div>
-        <div class="product">
-          <img src="skull.png" alt="Skull Fez" />
-          <h3>SCKULL</h3>
-          <button>ORDER NOW</button>
-        </div>
-        <div class="product">
-          <img src="hood.png" alt="Hoodie" />
-          <h3>بيتشود</h3>
-          <button>ORDER NOW</button>
-        </div>
-      </div>
-    </section>
+  <div class="section-title">FEATURED PRODUCTS</div>
+  <section class="products">
+    <div class="product">
+      <img src="tna.png" alt="TNA F Casablanca">
+      <h3>SEN ENCOUCA</h3>
+      <button>ORDER NOW</button>
+    </div>
+    <div class="product">
+      <img src="skull.png" alt="Skull">
+      <h3>SCKULL</h3>
+      <button>ORDER NOW</button>
+    </div>
+    <div class="product">
+      <img src="hood.png" alt="Hood">
+      <h3>بيتشود</h3>
+      <button>ORDER NOW</button>
+    </div>
+  </section>
 
-    <section class="about">
-      <h2>ABOUT THE BRAND</h2>
-      <p>
-        Vibes Moroccan Stor is a Morocann brand with a youthful spirit based on print-on-demand, offering unique designs inspired by Morccafitua.
-      </p>
-      <div class="buttons">
-        <a href="https://wa.me/" class="whatsapp">WHATSAPP</a>
-        <a href="#" class="contact">CONTACT US</a>
-      </div>
-    </section>
-  </main>
+  <section class="about">
+    <div class="section-title">ABOUT THE BRAND</div>
+    <p>Vibes Moroccan Stor is a Morocann brand with a youthful spirit based on print-on-demand, offering unique designs inspired by Morccafitua.</p>
+    <div class="buttons">
+      <a href="#" class="whatsapp">WHATSAPP</a>
+      <a href="#" class="contact">CONTACT US</a>
+    </div>
+  </section>
 </body>
 </html>
