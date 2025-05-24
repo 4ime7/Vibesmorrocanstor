@@ -1,47 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vibes Moroccan Stor</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      background-color: #fdfdfd;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .hero p {
+      font-size: 20px;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    .product-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      width: 280px;
+      margin: 15px;
+      padding: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .product-card a:hover {
+      background-color: #218838;
+    }
+
+    .about {
+      background-color: #f1f1f1;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    .about .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 16px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .about .buttons a:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Vibes Moroccan Stor Logo" class="logo" />
+    <img src="logo.png" alt="Vibes Logo" class="logo" />
     <nav>
-      <a href="#">HOME</a>
-      <a href="#">SHOP</a>
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT</a>
+      <a href="#">الرئيسية</a>
+      <a href="#shop">المتجر</a>
+      <a href="#about">حول البراند</a>
+      <a href="#contact">تواصل معنا</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>LMAGHRIB F T-SHIRT</h1>
+    <h1>Lmaghrib f T-shirt</h1>
+    <p>ستايل مغربي بطابع عصري</p>
   </section>
 
-  <section class="featured">
-    <h2>FEATURED PRODUCTS</h2>
-    <div class="products">
-      <div class="product">
-        <img src="1000777624.png" alt="7NA F Casablanca" />
-        <h3>koulchi momkin</h3>
-        <button>ORDER NOW</button>
-      </div>
-
-      <div class="product">
-        <img src="1000777754.png" alt="Skull Fez" />
-        <h3>SCKULL</h3>
-        <button>ORDER NOW</button>
-      </div>
-
-      <div class="product">
-        <img src="1000777753.png" alt="sir tqawe" />
-        <h3>سير تقود</h3>
-        <button>ORDER NOW</button>
-      </div>
+  <section id="shop" class="products">
+    <div class="product-card">
+      <img src="1000777624.png" alt="Product 1">
+      <h3>T-shirt #1</h3>
+      <a href="https://wa.me/212601280655" target="_blank">طلب عبر واتساب</a>
+    </div>
+    <div class="product-card">
+      <img src="1000777753.png" alt="Product 2">
+      <h3>T-shirt #2</h3>
+      <a href="https://wa.me/212601280655" target="_blank">طلب عبر واتساب</a>
+    </div>
+    <div class="product-card">
+      <img src="1000777754.png" alt="Product 3">
+      <h3>T-shirt #3</h3>
+      <a href="https://wa.me/212601280655" target="_blank">طلب عبر واتساب</a>
     </div>
   </section>
+
+  <section id="about" class="about">
+    <h2>حول البراند</h2>
+    <p>Vibes Moroccan Stor هو براند مغربي كيقدم تصاميم فريدة مستوحاة من الثقافة المغربية، بطابع عصري وستايل فابور. هدفنا نوصلو المغرب لكل بلاصة عبر التيشيرتات.</p>
+    <div class="buttons">
+      <a href="https://wa.me/212601280655" target="_blank">تواصل عبر واتساب</a>
+      <a href="#contact">اتصل بنا</a>
+    </div>
+  </section>
+
+  <footer id="contact">
+    جميع الحقوق محفوظة © 2025 - Vibes Moroccan Stor
+  </footer>
+
 </body>
 </html>
