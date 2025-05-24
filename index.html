@@ -1,148 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vibes Moroccan Stor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Alfa Slab One', cursive;
-      background: url('background.jpg') no-repeat center center fixed;
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: url('/mnt/data/background.png') no-repeat center center fixed;
       background-size: cover;
-      color: #f9e6be;
+      color: #f5d9a6;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      padding: 30px 50px;
     }
-    header img {
-      height: 100px;
-    }
-    nav ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-    nav ul li a {
-      color: #f9e6be;
+
+    nav a {
+      color: #f5d9a6;
       text-decoration: none;
-      font-size: 18px;
+      margin-left: 30px;
+      font-weight: bold;
+      font-size: 1rem;
     }
-    .hero-title {
+
+    .logo {
+      max-width: 250px;
+    }
+
+    .hero-text {
       text-align: center;
-      font-size: 48px;
-      margin: 30px 0;
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 20px 0;
     }
-    .section-title {
+
+    section {
+      padding: 40px 20px;
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 20px;
     }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
     .products {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 0 20px 40px;
+      flex-wrap: wrap;
+      gap: 30px;
     }
-    .product {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
+
+    .product-card {
+      background-color: rgba(0, 60, 60, 0.3);
+      border-radius: 20px;
       padding: 20px;
-      text-align: center;
+      max-width: 250px;
     }
-    .product img {
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
+
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
     }
-    .product h3 {
-      margin-top: 10px;
-      font-size: 20px;
+
+    .product-name {
+      font-size: 1.2rem;
+      margin: 10px 0;
     }
-    .product button {
-      margin-top: 10px;
-      background: orange;
-      color: #000;
-      font-weight: bold;
-      padding: 10px 15px;
+
+    .order-btn {
+      background-color: #ea5c25;
+      color: white;
       border: none;
-      border-radius: 5px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
       cursor: pointer;
     }
+
     .about {
-      text-align: center;
-      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
     }
-    .about p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 18px;
+
+    .buttons {
+      margin-top: 30px;
     }
-    .about .buttons a {
+
+    .buttons a {
       display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
+      margin: 0 10px;
+      padding: 10px 25px;
+      background-color: #ea5c25;
       color: white;
+      border-radius: 10px;
+      text-decoration: none;
       font-weight: bold;
     }
-    .whatsapp {
-      background: #25d366;
-    }
-    .contact {
-      background: orange;
+
+    .buttons a.whatsapp {
+      background-color: #25d366;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo">
+    <img src="/mnt/data/logo.png" alt="Vibes Moroccan Stor Logo" class="logo" />
     <nav>
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">SHOP</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
+      <a href="#">HOME</a>
+      <a href="#">SHOP</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CONTACT</a>
     </nav>
   </header>
 
-  <div class="hero-title">LMAGHRIB F T-SHIRT</div>
+  <div class="hero-text">LMAGHRIB F T-SHIRT</div>
 
-  <div class="section-title">FEATURED PRODUCTS</div>
-  <section class="products">
-    <div class="product">
-      <img src="tna.png" alt="TNA F Casablanca">
-      <h3>SEN ENCOUCA</h3>
-      <button>ORDER NOW</button>
-    </div>
-    <div class="product">
-      <img src="skull.png" alt="Skull">
-      <h3>SCKULL</h3>
-      <button>ORDER NOW</button>
-    </div>
-    <div class="product">
-      <img src="hood.png" alt="Hood">
-      <h3>بيتشود</h3>
-      <button>ORDER NOW</button>
+  <section>
+    <h2>FEATURED PRODUCTS</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="/mnt/data/1000777777.png" alt="7NA F Casablanca" />
+        <div class="product-name">koulchi momkin</div>
+        <button class="order-btn">ORDER NOW</button>
+      </div>
+      <div class="product-card">
+        <img src="/mnt/data/1000777753.jpg" alt="Skull Fez" />
+        <div class="product-name">SCKULL</div>
+        <button class="order-btn">ORDER NOW</button>
+      </div>
+      <div class="product-card">
+        <img src="/mnt/data/1000777754.jpg" alt="sir tqawed" />
+        <div class="product-name">سير تقود</div>
+        <button class="order-btn">ORDER NOW</button>
+      </div>
     </div>
   </section>
 
-  <section class="about">
-    <div class="section-title">ABOUT THE BRAND</div>
-    <p>Vibes Moroccan Stor is a Morocann brand with a youthful spirit based on print-on-demand, offering unique designs inspired by Morccafitua.</p>
-    <div class="buttons">
-      <a href="#" class="whatsapp">WHATSAPP</a>
-      <a href="#" class="contact">CONTACT US</a>
+  <section>
+    <h2>ABOUT THE BRAND</h2>
+    <div class="about">
+      Vibes Moroccan Stor is a Morocann brand with a youthful spirit based on print-on-demand, offering unique designs inspired by Morccafitua.
+      <div class="buttons">
+        <a href="https://wa.me/" class="whatsapp">WHATSAPP</a>
+        <a href="#contact">CONTACT US</a>
+      </div>
     </div>
   </section>
 </body>
