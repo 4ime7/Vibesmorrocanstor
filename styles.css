@@ -1,38 +1,97 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #1a1a00, #004d4d);
+  color: #fdf0c2;
 }
 
-.hero {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  min-height: 100vh;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .logo {
-  width: 120px;
-  margin-bottom: 20px;
+  height: 80px;
 }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.btn {
-  padding: 10px 20px;
-  background-color: white;
-  color: black;
+nav ul li a {
   text-decoration: none;
+  color: #fdf0c2;
   font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.products {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product {
+  background: #003333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+button {
+  background: orange;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
   border-radius: 5px;
+}
+
+.about {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.whatsapp {
+  background-color: green;
+}
+
+.contact {
+  background-color: orange;
 }
