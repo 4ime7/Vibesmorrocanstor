@@ -1,29 +1,56 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>T-shirt #1 - Vibes Moroccan Stor</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تيشورت حنا ف كازا </title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; direction: rtl; }
+    .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { color: #222; }
+    .price { font-size: 22px; color: #e91e63; margin: 10px 0; }
+    .old-price { text-decoration: line-through; color: #888; margin-left: 10px; font-size: 18px; }
+    .images { margin: 20px 0; }
+    .images img { width: 100%; border-radius: 8px; }
+    .details { margin: 20px 0; }
+    .btn { display: inline-block; background: #4CAF50; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    select { padding: 10px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc; margin-top: 10px; }
+  </style>
 </head>
-<body style="text-align: center; font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9;">
+<body>
+  <div class="container">
+    <h1>تيشورت حنا ف كازا  #3</h1>
 
-  <h1>T-shirt #1</h1>
-  <img src="310cd360-f48d-411a-ad38-8949d14d55a7.png" alt="T-shirt #1" style="max-width: 300px; width: 100%; border: 1px solid #ddd; border-radius: 10px;">
+    <div class="price">
+      149 درهم <span class="old-price">199 درهم</span>
+    </div>
 
-  <h2 style="color: #444; margin-top: 20px;">الثمن: 149 درهم</h2>
+    <div class="images">
+      <img src="310cd360-f48d-411a-ad38-8949d14d55a7.png" alt="T-shirt 3">
+    </div>
 
-  <p style="font-size: 16px; max-width: 500px; margin: auto;">
-    تيشورت ديال كازابلانكا "7na Fi Casablanca" بتصميم فني مغربي عصري.
-  </p>
+    <div class="details">
+      <p><strong>تفاصيل المنتج:</strong></p>
+      <ul>
+        <li>الخامة: قطن ممتاز</li>
+        <li>اللون: أسود أنيق</li>
+        <li>مقاسات: S / M / L / XL</li>
+        <li>تصميم حصري مستوحى من الثقافة المغربية</li>
+        <li>راحة وأناقة فالمظهر</li>
+      </ul>
+    </div>
 
-  <a href="https://wa.me/212601280655?text=سلام، بغيت نطلب T-shirt رقم 1" 
-     style="display: inline-block; margin-top: 20px; background-color: green; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none;">
-    طلب عبر واتساب
-  </a>
+    <label for="size">اختار المقاس:</label>
+    <select id="size">
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select>
 
-  <br><br>
-  <a href="index.html" style="text-decoration: underline; color: #555;">الرجوع للصفحة الرئيسية</a>
-
+    <div style="margin-top: 20px">
+      <a class="btn" href="https://wa.me/212601280655?text=سلام، بغيت نطلب T-shirt مغربي رقم 3 بمقاس [اكتب المقاس هنا]">اطلب عبر واتساب</a>
+    </div>
+  </div>
 </body>
 </html>
