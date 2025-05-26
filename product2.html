@@ -1,29 +1,125 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>T-shirt #2 - Vibes Moroccan Stor</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تيشورت الجمجمة بالطريوش المغربي #2</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .price {
+      font-size: 24px;
+      color: #d32f2f;
+      margin: 15px 0;
+    }
+    .old-price {
+      font-size: 18px;
+      color: #999;
+      text-decoration: line-through;
+      margin-right: 10px;
+    }
+    .images {
+      margin: 25px 0;
+    }
+    .images img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .details {
+      margin: 30px 0;
+    }
+    .details p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .details ul {
+      list-style: square inside;
+      color: #555;
+      line-height: 1.8;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 200px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #009688;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #00796b;
+    }
+  </style>
 </head>
-<body style="text-align: center; font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9;">
+<body>
+  <div class="container">
+    <h1>تيشورت الجمجمة بالطربوش مغربي #2</h1>
 
-  <h1>T-shirt #2</h1>
-  <img src="1972fd4a-82f4-482b-816c-7b3d9155129d.png" alt="T-shirt #2" style="max-width: 300px; width: 100%; border: 1px solid #ddd; border-radius: 10px;">
+    <div class="price">
+      <span class="old-price">199 درهم</span> 149 درهم
+    </div>
 
-  <h2 style="color: #444; margin-top: 20px;">الثمن: 149 درهم</h2>
+    <div class="images">
+      <img src="1972fd4a-82f4-482b-816c-7b3d9155129d.png" alt="T-shirt مغربي 2">
+    </div>
 
-  <p style="font-size: 16px; max-width: 500px; margin: auto;">
-    تيشورت أنيق بتصميم جمجمة والطربوش المغربي، مزيج جريء وراقي.
-  </p>
+    <div class="details">
+      <p>تفاصيل المنتج:</p>
+      <ul>
+        <li>الخامة: قطن 100%</li>
+        <li>اللون: أسود</li>
+        <li>متوفر بالمقاسات: S / M / L / XL</li>
+        <li>تصميم مغربي تقليدي بلمسة عصرية</li>
+        <li>سهل الغسيل ولا يتأثر بالطباعة</li>
+      </ul>
+    </div>
 
-  <a href="https://wa.me/212601280655?text=سلام، بغيت نطلب T-shirt رقم 2" 
-     style="display: inline-block; margin-top: 20px; background-color: green; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none;">
-    طلب عبر واتساب
-  </a>
+    <label for="size">اختار المقاس:</label>
+    <select id="size">
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select>
 
-  <br><br>
-  <a href="index.html" style="text-decoration: underline; color: #555;">الرجوع للصفحة الرئيسية</a>
-
+    <div>
+      <a class="btn" href="https://wa.me/212601280655?text=سلام، بغيت نطلب T-shirt مغربي رقم 2 بمقاس [اكتب المقاس هنا]">اطلب عبر واتساب</a>
+    </div>
+  </div>
 </body>
 </html>
