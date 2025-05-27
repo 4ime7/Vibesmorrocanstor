@@ -1,49 +1,114 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>الأسئلة الشائعة - Vibes Moroccan Stor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; color: #222; direction: rtl; margin: 0; padding: 0; }
-    .container { max-width: 800px; margin: auto; padding: 20px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 10px; margin-top: 40px; }
-    h1 { text-align: center; color: #4CAF50; }
-    .faq-item { margin-bottom: 20px; }
-    .faq-question { font-weight: bold; margin-bottom: 5px; color: #e91e63; }
-    .faq-answer { margin-right: 10px; }
-    a { color: #4CAF50; text-decoration: none; }
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .accordion {
+      background-color: #fdfdfd;
+      color: #222;
+      cursor: pointer;
+      padding: 18px 20px;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      text-align: right;
+      font-size: 18px;
+      transition: 0.3s;
+      border-radius: 6px;
+      margin-bottom: 5px;
+    }
+
+    .accordion:hover, .active {
+      background-color: #f0f0f0;
+    }
+
+    .panel {
+      padding: 0 20px 15px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .panel p {
+      margin: 10px 0 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h1>الأسئلة الشائعة</h1>
+    <h2>الأسئلة الشائعة</h2>
 
-    <div class="faq-item">
-      <div class="faq-question">ما هي مدة التوصيل؟</div>
-      <div class="faq-answer">عادةً ما يتم التوصيل داخل المغرب في غضون 2 إلى 5 أيام عمل.</div>
+    <button class="accordion">ما هي مدة التوصيل؟</button>
+    <div class="panel">
+      <p>مدة التوصيل تتراوح بين 2 إلى 5 أيام عمل حسب المدينة.</p>
     </div>
 
-    <div class="faq-item">
-      <div class="faq-question">هل يمكنني تغيير المقاس بعد الطلب؟</div>
-      <div class="faq-answer">نعم، إذا لم يتم الشحن بعد. تواصل معنا عبر <a href="https://wa.me/212601280655">الواتساب</a>.</div>
+    <button class="accordion">كيف أختار المقاس المناسب؟</button>
+    <div class="panel">
+      <p>يمكنك التواصل معنا على <a href="https://wa.me/212601280655">واتساب</a> لمساعدتك في اختيار المقاس المناسب.</p>
     </div>
 
-    <div class="faq-item">
-      <div class="faq-question">ما هي طرق الدفع المتوفرة؟</div>
-      <div class="faq-answer">نقبل الدفع عند الاستلام، أو بالبطاقة البنكية قريباً.</div>
+    <button class="accordion">هل يمكنني استبدال أو إرجاع المنتج؟</button>
+    <div class="panel">
+      <p>نعم، يمكنك إرجاع أو استبدال المنتج خلال 7 أيام من التوصيل إذا كان في حالته الأصلية.</p>
     </div>
 
-    <div class="faq-item">
-      <div class="faq-question">هل يمكنني استرجاع المنتج؟</div>
-      <div class="faq-answer">نعم، خلال 7 أيام من الاستلام، بشرط أن يكون في حالته الأصلية.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">هل الشحن مجاني؟</div>
-      <div class="faq-answer">الشحن مجاني للطلبات التي تفوق 300 درهم.</div>
+    <button class="accordion">كيف يمكنني تتبع طلبي؟</button>
+    <div class="panel">
+      <p>سوف تتوصل برسالة واتساب بها تفاصيل التتبع مباشرة بعد شحن الطلب.</p>
     </div>
   </div>
 
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
