@@ -195,6 +195,77 @@
   <footer id="contact">
     جميع الحقوق محفوظة © 2025 - Vibes Moroccan Stor
   </footer>
+<!-- 1. تأثيرات أنيميشن عند التمرير -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({ duration: 1000 });
+  });
+</script>
+
+<!-- استعمل data-aos="fade-up" أو غيره داخل عناصر HTML -->
+<div data-aos="fade-up">
+  <h2>مرحبا بكم في متجرنا</h2>
+</div>
+
+<!-- 2. فلترة المنتجات -->
+<style>
+  .product { display: block; margin-bottom: 20px; }
+  .hidden { display: none; }
+</style>
+<div>
+  <label>فلتر حسب المقاس:</label>
+  <select id="sizeFilter">
+    <option value="all">الكل</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+  </select>
+</div>
+<div class="products">
+  <div class="product" data-size="M">تيشورت مقاس M</div>
+  <div class="product" data-size="L">تيشورت مقاس L</div>
+  <div class="product" data-size="S">تيشورت مقاس S</div>
+</div>
+<script>
+  document.getElementById('sizeFilter').addEventListener('change', function () {
+    const value = this.value;
+    document.querySelectorAll('.product').forEach(product => {
+      if (value === 'all' || product.dataset.size === value) {
+        product.classList.remove('hidden');
+      } else {
+        product.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+<!-- 3. نظام التقييم بالنجوم -->
+<style>
+  .stars input { display: none; }
+  .stars label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  .stars input:checked ~ label,
+  .stars label:hover,
+  .stars label:hover ~ label {
+    color: gold;
+  }
+</style>
+<div class="rating">
+  <p>قيم هذا المنتج:</p>
+  <div class="stars">
+    <input type="radio" name="star" id="star1" /><label for="star1">★</label>
+    <input type="radio" name="star" id="star2" /><label for="star2">★</label>
+    <input type="radio" name="star" id="star3" /><label for="star3">★</label>
+    <input type="radio" name="star" id="star4" /><label for="star4">★</label>
+    <input type="radio" name="star" id="star5" /><label for="star5">★</label>
+  </div>
+</div>
 
 </body>
 </html>
