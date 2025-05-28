@@ -1,142 +1,272 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vibes Moroccan Stor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Arial', sans-serif;
       direction: rtl;
+      background-color: #fdfdfd;
     }
+
     header {
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 10;
     }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 15px;
+
+    .logo {
+      height: 50px;
     }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+
     nav a {
+      color: white;
       text-decoration: none;
-      color: #333;
-      margin: 0 15px;
+      margin-left: 20px;
       font-weight: bold;
     }
+
     .hero {
-      background: url('images/hero-bg.jpg') center/cover no-repeat;
-      color: white;
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center;
       text-align: center;
+      color: white;
       padding: 100px 20px;
     }
+
     .hero h1 {
       font-size: 48px;
       margin-bottom: 10px;
+      text-shadow: 2px 2px 5px black;
     }
+
     .hero p {
       font-size: 20px;
+      text-shadow: 1px 1px 4px black;
     }
+
     .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background-color: #fff;
     }
-    .product {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      overflow: hidden;
-      transition: transform 0.3s ease;
+
+    .product-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      width: 280px;
+      margin: 15px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .product:hover {
+
+    .product-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-    .product img {
+
+    .product-card img {
       width: 100%;
-      height: auto;
+      border-radius: 8px;
     }
-    .product h3 {
-      padding: 10px;
+
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
     }
-    .product a {
-      display: block;
-      background: #4CAF50;
+
+    .product-card a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background-color: #28a745;
       color: white;
-      text-align: center;
-      padding: 10px;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
+
+    .product-card a.button:hover {
+      background-color: #218838;
+    }
+
+    .about {
+      background-color: #f1f1f1;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    .about .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 16px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .about .buttons a:hover {
+      background-color: #0056b3;
+    }
+
     footer {
-      background: #222;
-      color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      font-size: 14px;
     }
-    footer a {
-      color: #4CAF50;
-      text-decoration: none;
+
+    .stars input { display: none; }
+    .stars label {
+      font-size: 24px;
+      color: #ccc;
+      cursor: pointer;
+    }
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: gold;
+    }
+
+    .filter {
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="container">
-      <nav>
-        <div class="logo"><a href="#">Vibes Moroccan Stor</a></div>
-        <div class="menu">
-          <a href="#">الرئيسية</a>
-          <a href="#products">المتجر</a>
-          <a href="#faq">الأسئلة الشائعة</a>
-          <a href="#contact">تواصل معنا</a>
-        </div>
-      </nav>
-    </div>
+    <img src="logo.png" alt="Vibes Logo" class="logo" />
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#shop">المتجر</a>
+      <a href="#about">حول البراند</a>
+      <a href="#contact">تواصل معنا</a>
+      <a href="faq.html">الأسئلة الشائعة</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <h1>LMaghrib f T-shirt</h1>
-    <p>تصاميم مغربية بطابع عصري</p>
+  <section class="hero" data-aos="fade-up">
+    <h1>Lmaghrib f T-shirt</h1>
+    <p>ستايل مغربي بطابع عصري</p>
   </section>
 
-  <section id="products" class="products container">
-    <div class="product">
-      <img src="images/ChatGPT Image May 24, 2025, 12_41_43 PM.png" alt="T-shirt 1">
-      <h3>تيشورت مغربي #1</h3>
-      <a href="product1.html">تفاصيل</a>
+  <div class="filter" data-aos="fade-up">
+    <label>فلتر حسب المقاس:</label>
+    <select id="sizeFilter">
+      <option value="all">الكل</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select>
+  </div>
+
+  <section id="shop" class="products">
+    <div class="product-card" data-size="M" data-aos="fade-up">
+      <img src="310cd360-f48d-411a-ad38-8949d14d55a7.png" alt="Product 1">
+      <h3>T-shirt #1</h3>
+      <a href="product1.html" class="button">شوف التفاصيل</a>
+      <div class="rating">
+        <div class="stars">
+          <input type="radio" name="star1" id="star1-1"><label for="star1-1">★</label>
+          <input type="radio" name="star1" id="star1-2"><label for="star1-2">★</label>
+          <input type="radio" name="star1" id="star1-3"><label for="star1-3">★</label>
+          <input type="radio" name="star1" id="star1-4"><label for="star1-4">★</label>
+          <input type="radio" name="star1" id="star1-5"><label for="star1-5">★</label>
+        </div>
+      </div>
     </div>
-    <div class="product">
-      <img src="images/1972fd4a-82f4-482b-816c-7b3d9155129d.png" alt="T-shirt 2">
-      <h3>تيشورت مغربي #2</h3>
-      <a href="product2.html">تفاصيل</a>
+
+    <div class="product-card" data-size="L" data-aos="fade-up">
+      <img src="1972fd4a-82f4-482b-816c-7b3d9155129d.png" alt="Product 2">
+      <h3>T-shirt #2</h3>
+      <a href="product2.html" class="button">شوف التفاصيل</a>
+      <div class="rating">
+        <div class="stars">
+          <input type="radio" name="star2" id="star2-1"><label for="star2-1">★</label>
+          <input type="radio" name="star2" id="star2-2"><label for="star2-2">★</label>
+          <input type="radio" name="star2" id="star2-3"><label for="star2-3">★</label>
+          <input type="radio" name="star2" id="star2-4"><label for="star2-4">★</label>
+          <input type="radio" name="star2" id="star2-5"><label for="star2-5">★</label>
+        </div>
+      </div>
     </div>
-    <div class="product">
-      <img src="images/310cd360-f48d-411a-ad38-8949d14d55a7.png" alt="T-shirt 3">
-      <h3>تيشورت مغربي #3</h3>
-      <a href="product3.html">تفاصيل</a>
+
+    <div class="product-card" data-size="S" data-aos="fade-up">
+      <img src="ChatGPT Image May 24, 2025, 12_41_43 PM.png" alt="Product 3">
+      <h3>T-shirt #3</h3>
+      <a href="product3.html" class="button">شوف التفاصيل</a>
+      <div class="rating">
+        <div class="stars">
+          <input type="radio" name="star3" id="star3-1"><label for="star3-1">★</label>
+          <input type="radio" name="star3" id="star3-2"><label for="star3-2">★</label>
+          <input type="radio" name="star3" id="star3-3"><label for="star3-3">★</label>
+          <input type="radio" name="star3" id="star3-4"><label for="star3-4">★</label>
+          <input type="radio" name="star3" id="star3-5"><label for="star3-5">★</label>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Vibes Moroccan Stor. جميع الحقوق محفوظة.</p>
-    <p><a href="mailto:VibesMoroccanStor@gmail.com">راسلنا</a></p>
+  <section id="about" class="about" data-aos="fade-up">
+    <h2>حول البراند</h2>
+    <p>Vibes Moroccan Stor هو براند مغربي كيقدم تصاميم فريدة مستوحاة من الثقافة المغربية، بطابع عصري وستايل فابور. هدفنا نوصلو المغرب لكل بلاصة عبر التيشيرتات.</p>
+    <div class="buttons">
+      <a href="https://wa.me/212601280655" target="_blank">تواصل عبر واتساب</a>
+      <a href="#contact">اتصل بنا</a>
+    </div>
+  </section>
+
+  <footer id="contact">
+    جميع الحقوق محفوظة © 2025 - Vibes Moroccan Stor
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    document.getElementById('sizeFilter').addEventListener('change', function () {
+      const selectedSize = this.value;
+      document.querySelectorAll('.product-card').forEach(card => {
+        const size = card.getAttribute('data-size');
+        card.style.display = (selectedSize === 'all' || size === selectedSize) ? 'block' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
