@@ -1,277 +1,57 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vibes Moroccan Stor</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      direction: rtl;
-      background-color: #fdfdfd;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 30px;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      height: 50px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    .hero {
-      background-image: url("background.jpg");
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      color: white;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 5px black;
-    }
-
-    .hero p {
-      font-size: 20px;
-      text-shadow: 1px 1px 4px black;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 50px 20px;
-      background-color: #fff;
-    }
-
-    .product-card {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      width: 280px;
-      margin: 15px;
-      padding: 15px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .product-card h3 {
-      margin: 10px 0;
-      font-size: 20px;
-    }
-
-    .product-card a.button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background-color: #28a745;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-
-    .product-card a.button:hover {
-      background-color: #218838;
-    }
-
-    .about {
-      background-color: #f1f1f1;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .about h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .about p {
-      max-width: 800px;
-      margin: 0 auto 30px;
-      font-size: 18px;
-    }
-
-    .about .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 16px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-
-    .about .buttons a:hover {
-      background-color: #0056b3;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: white;
-      font-size: 14px;
-    }
-
-    .stars input { display: none; }
-    .stars label {
-      font-size: 24px;
-      color: #ccc;
-      cursor: pointer;
-    }
-    .stars input:checked ~ label,
-    .stars label:hover,
-    .stars label:hover ~ label {
-      color: gold;
-    }
-
-    .filter {
-      text-align: center;
-      margin: 30px auto;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibes Moroccan Store</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="Vibes Logo" class="logo" />
-    <nav class="navbar">
-  <div class="container">
-    <input type="checkbox" id="toggle" />
-    <label for="toggle"class="hamburger">&#9776;</label>
-    <ul class="menu">
-       <li><a href="#home">الرئيسية</a></li>
-      <li><a href="#shop">المتجر</a></li>
-      <li><a href="#about">حول البراند</a></li>
-      <li><a href="#contact">تواصل معنا</a></li>
-      <li><a href="faq.html">الأسئلة الشائعة</a></li>
-    </ul>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>T-shirts مغربية بهوية عصرية 🇲🇦</h1>
+    <p>تصاميم مستوحاة من الثقافة المغربية بجودة عالية</p>
+    <a href="#products" class="btn-main">تسوق الآن</a>
   </div>
-    </nav> 
-  </header>
-  <section class="hero" data-aos="fade-up">
-    <h1>Lmaghrib f T-shirt</h1>
-    <p>ستايل مغربي بطابع عصري</p>
-  </section>
+</section>
 
-  <div class="filter" data-aos="fade-up">
-    <label>فلتر حسب المقاس:</label>
-    <select id="sizeFilter">
-      <option value="all">الكل</option>
-      <option value="S">S</option>
-      <option value="M">M</option>
-      <option value="L">L</option>
-      <option value="XL">XL</option>
-    </select>
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <div class="product-card">
+    <img src="tshirt1.png" alt="7na f Casablanca">
+    <h3>7na f Casablanca</h3>
+    <span>199 MAD</span>
+    <a href="https://wa.me/2126XXXXXXX" target="_blank">اطلب عبر واتساب</a>
   </div>
 
-  <section id="shop" class="products">
-    <div class="product-card" data-size="M" data-aos="fade-up">
-      <img src="310cd360-f48d-411a-ad38-8949d14d55a7.png" alt="Product 1">
-      <h3>T-shirt #1</h3>
-      <a href="product1.html" class="button">شوف التفاصيل</a>
-      <div class="rating">
-        <div class="stars">
-          <input type="radio" name="star1" id="star1-1"><label for="star1-1">★</label>
-          <input type="radio" name="star1" id="star1-2"><label for="star1-2">★</label>
-          <input type="radio" name="star1" id="star1-3"><label for="star1-3">★</label>
-          <input type="radio" name="star1" id="star1-4"><label for="star1-4">★</label>
-          <input type="radio" name="star1" id="star1-5"><label for="star1-5">★</label>
-        </div>
-      </div>
-    </div>
+  <div class="product-card">
+    <img src="tshirt2.png" alt="Koulchi Possible">
+    <h3>Koulchi Possible</h3>
+    <span>199 MAD</span>
+    <a href="https://wa.me/2126XXXXXXX" target="_blank">اطلب عبر واتساب</a>
+  </div>
 
-    <div class="product-card" data-size="L" data-aos="fade-up">
-      <img src="1972fd4a-82f4-482b-816c-7b3d9155129d.png" alt="Product 2">
-      <h3>T-shirt #2</h3>
-      <a href="product2.html" class="button">شوف التفاصيل</a>
-      <div class="rating">
-        <div class="stars">
-          <input type="radio" name="star2" id="star2-1"><label for="star2-1">★</label>
-          <input type="radio" name="star2" id="star2-2"><label for="star2-2">★</label>
-          <input type="radio" name="star2" id="star2-3"><label for="star2-3">★</label>
-          <input type="radio" name="star2" id="star2-4"><label for="star2-4">★</label>
-          <input type="radio" name="star2" id="star2-5"><label for="star2-5">★</label>
-        </div>
-      </div>
-    </div>
+  <div class="product-card">
+    <img src="tshirt3.png" alt="Lmaghrib Style">
+    <h3>Lmaghrib Style</h3>
+    <span>199 MAD</span>
+    <a href="https://wa.me/2126XXXXXXX" target="_blank">اطلب عبر واتساب</a>
+  </div>
+</section>
 
-    <div class="product-card" data-size="S" data-aos="fade-up">
-      <img src="ChatGPT Image May 24, 2025, 12_41_43 PM.png" alt="Product 3">
-      <h3>T-shirt #3</h3>
-      <a href="product3.html" class="button">شوف التفاصيل</a>
-      <div class="rating">
-        <div class="stars">
-          <input type="radio" name="star3" id="star3-1"><label for="star3-1">★</label>
-          <input type="radio" name="star3" id="star3-2"><label for="star3-2">★</label>
-          <input type="radio" name="star3" id="star3-3"><label for="star3-3">★</label>
-          <input type="radio" name="star3" id="star3-4"><label for="star3-4">★</label>
-          <input type="radio" name="star3" id="star3-5"><label for="star3-5">★</label>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- TRUST -->
+<section class="trust">
+  <div>🚚 توصيل لجميع المدن</div>
+  <div>🇲🇦 صناعة مغربية 100%</div>
+  <div>💬 طلب سهل عبر واتساب</div>
+</section>
 
-  <section id="about" class="about" data-aos="fade-up">
-    <h2>حول البراند</h2>
-    <p>Vibes Moroccan Stor هو براند مغربي كيقدم تصاميم فريدة مستوحاة من الثقافة المغربية، بطابع عصري وستايل فابور. هدفنا نوصلو المغرب لكل بلاصة عبر التيشيرتات.</p>
-    <div class="buttons">
-      <a href="https://wa.me/212601280655" target="_blank">تواصل عبر واتساب</a>
-      <a href="#contact">اتصل بنا</a>
-    </div>
-  </section>
+<!-- FOOTER -->
+<footer>
+  © 2025 Vibes Moroccan Store - جميع الحقوق محفوظة
+</footer>
 
-  <footer id="contact">
-    جميع الحقوق محفوظة © 2025 - Vibes Moroccan Stor
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-
-    document.getElementById('sizeFilter').addEventListener('change', function () {
-      const selectedSize = this.value;
-      document.querySelectorAll('.product-card').forEach(card => {
-        const size = card.getAttribute('data-size');
-        card.style.display = (selectedSize === 'all' || size === selectedSize) ? 'block' : 'none';
-      });
-    });
-  </script>
 </body>
 </html>
